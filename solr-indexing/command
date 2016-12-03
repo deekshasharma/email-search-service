@@ -1,0 +1,4 @@
+docker build -t solr:latest ./docker
+
+docker run -d --name mysolr -p 8983:8983 -v `pwd`:/opt/solr-6.3.0/server/solr solr:latest bash -c "/opt/solr-6.3.0/bin/solr start -f"
+
