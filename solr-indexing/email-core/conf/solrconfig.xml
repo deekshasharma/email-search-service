@@ -98,7 +98,7 @@
        replication is in use, this should match the replication
        configuration.
     -->
-  <dataDir>/var/data/solr</dataDir>
+  <dataDir>${solr.data.dir}</dataDir>
 
 
   <!-- The DirectoryFactory to use for indexes.
@@ -116,7 +116,7 @@
        persistent, and doesn't work with replication.
     -->
   <directoryFactory name="DirectoryFactory"
-                    class="org.apache.solr.core.RAMDirectoryFactory"/>
+                    class="solr.directoryFactory:solr.RAMDirectoryFactory"/>
 
   <!-- The CodecFactory for defining the format of the inverted index.
        The default implementation is SchemaCodecFactory, which is the official Lucene
